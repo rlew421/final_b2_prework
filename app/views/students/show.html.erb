@@ -1,0 +1,11 @@
+<h1><%= @student.name %></h1>
+
+<section class = "list-courses">
+  <h2>Courses <%= @student.name %> is enrolled in:</h2>
+  <% @student.course_students.each do |course_student| %>
+    <section id= 'course-<%=course_student.course.id%>'>
+      <%= course_student.course.name %>
+      Grade: <%= course_student.grade %>
+    </section>
+  <% end %>
+</section>
