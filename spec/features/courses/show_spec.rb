@@ -21,7 +21,7 @@ RSpec.describe "course show page" do
     course.course_students.create!(student: student_5, course: course, grade: 71.2)
 
     visit "/courses/#{course.id}"
-    save_and_open_page
+    
     expect(page).to have_content(course.name)
     expect(page).to have_content(student_3.name)
     expect(page).to have_content(student_4.name)
